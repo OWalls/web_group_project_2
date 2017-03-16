@@ -1,0 +1,51 @@
+nav{
+  background-color: #f2f2f2;
+  height: 215px;
+}
+nav.ul{
+
+}
+nav ul li{
+  display: inline;
+}
+nav a{
+  text-decoration: none;
+  color:#303030;
+  font-size: 1.06em;
+  font-family: 'Lato Regular', sans-serif;
+}
+header{
+  height:600px;
+  background: url(../../assets/images/fix-index-hero.jpg)
+}
+.main{
+  display: flex;
+}
+.a{
+  font-size: 1em;
+  font-family: 'Lato Regular', sans-serif;
+}
+.section2{
+  background-color: #8e5942;
+  height: 220px;
+}
+footer{
+  background-color: #be5f27;
+  display: flex;
+  height:250px;
+}
+footer div{
+  display: inline-flex;
+}
+footer div p.f1b{
+  display: block;
+}
+footer div img.f2 {
+  width: 100%;
+}
+footer div img.f3 {
+  width: 38px;
+}
+footer div ul {
+  text-decoration: none;
+}
