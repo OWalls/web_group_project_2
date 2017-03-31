@@ -1,12 +1,22 @@
+body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    /*display:flex;
+    flex-direction: column; */
+}
+/* Nav & Header */
 nav{
-  background-color: #f2f2f2;
-  height: 215px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
-nav.ul{
+nav ul {
 
-}
-nav ul li{
-  display: inline;
+  list-style-type: none;
 }
 nav a{
   text-decoration: none;
@@ -15,37 +25,396 @@ nav a{
   font-family: 'Lato Regular', sans-serif;
 }
 header{
-  height:600px;
-  background: url(../../assets/images/fix-index-hero.jpg)
+  height:500px;
+  background: url(../../assets/images/fix-index-hero.jpg) no-repeat center center fixed;
+  background-size: 100%;
+  /*-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+
 }
+ .about{
+  height:500px;
+  background: url(../../assets/images/fix-about-hero.jpg) no-repeat center center fixed;
+  background-size: 100%;
+  /*-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
+.menu{
+ height:500px;
+ background: url(../../assets/images/fix-menu-hero.jpg) no-repeat center center fixed;
+ background-size: 100%;
+ /*-webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;*/
+}
+/* Main Layout */
 .main{
   display: flex;
+  flex-direction: column;
+  margin: 0;
 }
-.a{
+
+
+section{
+  display: flex;
+  background-color: #f2f2f2;
+  color: #c3bbac;
+
+}
+
+.a, .text-about{
   font-size: 1em;
-  font-family: 'Lato Regular', sans-serif;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  color: #303030;
+}
+.a h1, .text-about .h1about, .flex-grid .text-about .h1hours{
+  font-style: 'Oswald', serif;
+  font-size: 2.1em;
+  text-align: center;
+}
+.a p a, .text-about p a {
+  text-decoration: none;
+  color: #8e5942;
+  font-weight: bold;
+}
+.b{
+  background-color: #c3bbac;
+  text-align: center;
+}
+.b img {
+
+  margin-top: 10%;
+  text-align: center;
+}
+.b p{
+  font-family: 'Oswald', serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 3.25em;
+  color: #f2f2f2;
+  line-height: .75em;
 }
 .section2{
-  background-color: #8e5942;
-  height: 220px;
+
+  display: flex;
 }
+.light{
+  font-family: 'Oswald', serif;
+  font-weight: 300;
+}
+
+.flex-grid .text{
+  font-family: 'Oswald', serif;
+  font-weight: bold;
+  font-size: 3.25em;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: .75em;
+}
+.flex-grid .text-about h1, .text-about h2 {
+  font-family: 'Oswald';
+  font-size: 1em;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  line-height: 1em;
+}
+/*About Page*/
+
+.text-about h1{
+  color: #8e5942;
+}
+.text-about h2{
+  font-weight: 300;
+  color: #c3bbac;
+}
+.text-about p{
+  color: #303030;
+  line-height: 2.5em;
+  align-self: center
+  text-align: left;
+}
+.cassandra .pic-about{
+  text-align: right;
+}
+.danielle {
+  text-align: left;
+
+}
+.pic-about{
+  background-color: #c3bbac;
+}
+/* Hours */
+.text-about .h1{
+  margin-top: 0;
+}
+.h p{
+  color: #8e5942;
+  font-size: 2.5em;
+  line-height: 1em;
+}
+.h{
+  background-color: #c3bbac;
+}
+/** FOOTER*/
 footer{
   background-color: #be5f27;
   display: flex;
+  align-items: center;
+  justify-content: center;
   height:250px;
 }
 footer div{
   display: inline-flex;
-}
-footer div p.f1b{
-  display: block;
-}
+  align-items: center;
+  padding: 30px;
+  }
+  footer div.flex-item.f1{
+    display: block;
+    color: #f2f2f2;
+    font-size: .9em;
+  }
+  footer div.flex-item.f1 p{
+    padding: 10px;
+  }
 footer div img.f2 {
-  width: 100%;
+  width: 100px;
 }
 footer div img.f3 {
   width: 38px;
 }
-footer div ul {
+ .f3 ul li {
   text-decoration: none;
+  list-style-type: none;
+  display: inline-flex;
+  padding:20px;
 }
+.flex-item.f3 p{
+position: relative;
+top: 60px;
+right: 160px;
+  color: #f2f2f2;
+  font-size: .9em;
+}
+
+/* Smaller than Tablets */
+    @media only screen and (min-width : 503px) {
+      nav ul {
+        text-align: center;
+      }
+        nav ul li {
+          display: inline-flex;
+          margin: 3%;
+        }
+        .a h1{
+          position: relative;
+          z-index: 1;
+          width: 80%;
+          left: 150px;
+          color: #fff;
+          background-color: #d49b30;
+          margin:0;
+
+        }
+        .a, .b {
+          align-items: center;
+          width: 50%;
+        }
+        .section2{
+          background-color: #8e5942;
+          height: 180px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: space-around;
+          font-size: 1.5em;
+          font-family: 'Oswald', serif;
+          font-weight: bold;
+          color: #f2f2f2;
+          width: 100%;
+        }
+        .flex-grid .text{
+          width: 100%;
+
+        }
+        .flex-grid .pic{
+          width: 100%;
+
+        }
+        .pic img{
+          width: 100%;
+        }
+        .f3 ul li {
+          padding: 0;
+        }
+        footer div{
+          padding: 0;
+        }
+      .flex-item.f3 p {
+        right: 100px;
+      }
+
+    }
+/* Small Devices, Tablets */
+    @media only screen and (min-width : 750px) {
+    nav ul {
+      text-align: center;
+    }
+      nav ul li {
+        display: inline-flex;
+        margin: 3%;
+      }
+      .a h1{
+        position: relative;
+        z-index: 1;
+        width: 50%;
+        left: 300px;
+        color: #fff;
+        background-color: #d49b30;
+        margin:0;
+
+      }
+      .a, .b {
+        align-items: center;
+        width: 50%;
+      }
+
+      .flex-grid .text{
+        width: 50%;
+        display: inline-flex;
+      }
+      .flex-grid .pic{
+        width: 50%;
+        display: inline-flex;
+      }
+      .pic img{
+        width: 100%;
+      }
+      .f3 ul li {
+        padding: 0;
+      }
+      footer div{
+        padding: 0;
+      }
+    .flex-item.f3 p {
+      right: 100px;
+    }
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+      nav{
+        display:flex;
+        background-color: #f2f2f2;
+        height: 215px;
+        align-items: center;
+        justify-content: center;
+      }
+      .logo-img{
+        display: inline-block;
+
+      }
+      nav ul {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+      nav ul li {
+        display: inline-flex;
+      margin: 10%;
+      }
+      .main{
+
+
+      }
+      /*section{
+        display: flex;
+      }*/
+
+      .one, .flex-grid {
+        display: inline-flex;
+        width:100%;
+        height: auto;
+      }
+      .a h1, .pic-about .h1about, .text-about .h1hours{
+        position: relative;
+        z-index: 1;
+        left: 500px;
+        color: #fff;
+        background-color: #d49b30;
+        width: 35%;
+        padding: 2%;
+        margin: 0;
+        text-align: center;
+      }
+      .a, .b {
+        align-items: center;
+        width: 50%;
+      }
+      .a p{
+
+        text-align: left;
+        line-height: 2.5em;
+        margin-left: 26%;
+        margin-right: 20%;
+      }
+      .b p{
+        margin: 0;
+      }
+      .section2{
+        background-color: #8e5942;
+        height: 220px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 2.1em;
+        font-family: 'Oswald', serif;
+        font-weight: bold;
+        color: #f2f2f2;
+        width: 100%;
+      }
+      .flex-grid .text{
+        width: 45%;
+        display: inline-flex;
+      }
+      .flex-grid .pic{
+        width: 60%;
+        display: inline-flex;
+      }
+
+    .pic img{
+      width: 100%;
+      margin: 0;
+    }
+    /* About Page */
+    h1{
+      display: block;
+    }
+    .flex-grid .text-about, .flex-grid .pic-about{
+      width: 50%;
+    }
+    /*.abouta{
+      margin-top: 15%;
+    }*/
+    .text-about{
+      align-self: center;
+      text-align: left;
+    }
+    .pic-about img{
+      width: 98%;
+    }
+    .text-about p, .text-about h1, .text-about h2{
+      margin-left: 10%;
+      margin-right: 18%;
+    }
+    }
