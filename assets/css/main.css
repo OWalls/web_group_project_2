@@ -25,9 +25,9 @@ nav a{
   font-family: 'Lato Regular', sans-serif;
 }
 header{
-  height:500px;
+  height:600px;
   background: url(../../assets/images/fix-index-hero.jpg) no-repeat center center fixed;
-  background-size: 100%;
+  background-size: 100% 100%;
   /*-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -35,18 +35,28 @@ header{
 
 }
  .about{
-  height:500px;
+  height:600px;
   background: url(../../assets/images/fix-about-hero.jpg) no-repeat center center fixed;
-  background-size: 100%;
+  background-size: 100% 100%;
   /*-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;*/
 }
 .menu{
- height:500px;
+ height:600px;
  background: url(../../assets/images/fix-menu-hero.jpg) no-repeat center center fixed;
- background-size: 100%;
+ background-size: 100% 100%;
+
+ /*-webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;*/
+}
+.custom{
+ height:600px;
+ background: url(../../assets/images/fix-custom-hero.jpg) no-repeat center center fixed;
+ background-size: 100% 100%;
  /*-webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
@@ -57,6 +67,8 @@ header{
   display: flex;
   flex-direction: column;
   margin: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -164,6 +176,48 @@ section{
 }
 .h{
   background-color: #c3bbac;
+}
+/* Menu */
+.menu-main, .custom-main{
+  width: 45%;
+  display: flex;
+  background-color: #c3bbac;
+}
+.menu-main h2{
+  color:#8e5942;
+}
+.menu-main .titles{
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+.h1menu1, .h1menu2 {
+  width: 30%;
+  font-size: 2.5em;
+  justify-content: center;
+  font-family: 'Oswald';
+  padding: 1%;
+}
+.h1menu1{
+  background-color: #f2f2f2;
+}
+.h1menu2, .h1custom{
+  background-color: #d49b30;
+}
+.menu-main p{
+  color:#303030;
+}
+.menu-main h2, .menu-main p{
+  margin: 10%;
+  font-family: 'Oswald';
+}
+/*Custom*/
+.h1custom{
+  width: 100%;
+  font-size: 2.5em;
+  justify-content: center;
+  font-family: 'Oswald';
+
 }
 /** FOOTER*/
 footer{
