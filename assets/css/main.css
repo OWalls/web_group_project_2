@@ -12,7 +12,9 @@ body
 nav{
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 9999;
+  -webkit-transition: all 0.4s ease-in-out
+  -moz-transition: all 0.4s ease-in-out
 }
 nav ul {
 
@@ -34,6 +36,12 @@ header{
   background-size: cover;*/
 
 }
+.shrink {
+  width: 100%;
+  height: 100px;
+  opacity: .75;
+}
+
  .about{
   height:600px;
   background: url(../../assets/images/fix-about-hero.jpg) no-repeat center center fixed;
@@ -70,13 +78,24 @@ header{
   justify-content: center;
   align-items: center;
 }
+/* Home */
+.flex-grid{
 
+  width: 100%;
+}
 
 section{
   display: flex;
   background-color: #f2f2f2;
   color: #c3bbac;
+  display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column;
+   flex-direction: column;
 
+}
+h1{
+  font-family:
 }
 
 .a, .text-about{
@@ -85,12 +104,12 @@ section{
   text-align: center;
   color: #303030;
 }
-.a h1, .text-about .h1about, .flex-grid .text-about .h1hours{
-  font-style: 'Oswald', serif;
+.a h1, .pic-about .h1about, .flex-grid .text-about .h1hours, .text-menu .h1custom, .h1menu1, .h1menu2 {
+  font-family: 'Oswald', serif;
   font-size: 2.1em;
   text-align: center;
 }
-.a p a, .text-about p a {
+.a p a, .text-about p a, .text-menu p a{
   text-decoration: none;
   color: #8e5942;
   font-weight: bold;
@@ -179,11 +198,11 @@ section{
 }
 /* Menu */
 .menu-main, .custom-main{
-  width: 45%;
+  width: 50%;
   display: flex;
   background-color: #c3bbac;
 }
-.menu-main h2{
+.menu-main h2, .custom-main h2{
   color:#8e5942;
 }
 .menu-main .titles{
@@ -191,12 +210,12 @@ section{
   display: inline-flex;
   justify-content: center;
 }
-.h1menu1, .h1menu2 {
+.h1menu1, .h1menu2, /*.h1custom*/ {
   width: 30%;
   font-size: 2.5em;
   justify-content: center;
   font-family: 'Oswald';
-  padding: 1%;
+  padding: 2%;
 }
 .h1menu1{
   background-color: #f2f2f2;
@@ -204,19 +223,72 @@ section{
 .h1menu2, .h1custom{
   background-color: #d49b30;
 }
-.menu-main p{
+.menu-main p, .custom-main p, .custom-main li{
   color:#303030;
 }
-.menu-main h2, .menu-main p{
-  margin: 10%;
+.menu-main h2, .menu-main p,.custom-main h2, .custom-main p, .custom-main li {
+  margin: 0 0 0% 10%;
   font-family: 'Oswald';
 }
+.menu-main p, .custom-main p, .text-menu ul{
+  margin-bottom: 8%;
+}
+.other-menu {
+    display: none;
+  }
+
+}
 /*Custom*/
-.h1custom{
+/*.h1custom{
   width: 100%;
   font-size: 2.5em;
   justify-content: center;
   font-family: 'Oswald';
+
+}*/
+.text-menu {
+  justify-content: center;
+  text-align: center;
+}
+.h1custom{
+  color: #fff;
+}
+form{
+  margin:10%;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+form label{
+  color:#000000;
+  font-family: 'Oswald';
+  text-align:left;
+  display: block;
+
+}
+form input{
+width: 100%;
+}
+input[type="textbox"] {
+  height: 150px;
+}
+.block{
+
+  margin-bottom: 8%;
+}
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button[type="button"]{
+  background-color: #be5f27;
+  color: #fff;
+  padding: 3%;
+  width: 25%;
+
 
 }
 /** FOOTER*/
@@ -366,6 +438,12 @@ right: 160px;
 
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 992px) {
+      section{
+  display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+}
       nav{
         display:flex;
         background-color: #f2f2f2;
@@ -400,7 +478,7 @@ right: 160px;
         width:100%;
         height: auto;
       }
-      .a h1, .pic-about .h1about, .text-about .h1hours{
+      .a h1, .pic-about .h1about, .text-about .h1hours, .h1custom{
         position: relative;
         z-index: 1;
         left: 500px;
@@ -470,5 +548,19 @@ right: 160px;
     .text-about p, .text-about h1, .text-about h2{
       margin-left: 10%;
       margin-right: 18%;
+    }
+    /* Menu */
+    .h1menu1, .h1menu2{
+      padding: 2%;
+      width: 25%;
+    }
+
+    /*Custom */
+    .h1custom {
+      left: 200px;
+    }
+    /* footer */
+    footer{
+      justify-content: space-around;
     }
     }
